@@ -3,7 +3,7 @@ package app
 import (
 	"encoding/json"
 	"errors"
-	"github.com/SonnLarissa/gosql/pkg/customers"
+	"github.com/SonnLarissa/crud/pkg/customers"
 	"log"
 	"net/http"
 	"strconv"

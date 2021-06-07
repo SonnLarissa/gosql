@@ -2,11 +2,12 @@ package main
 
 import (
 	"database/sql"
-	"github.com/SonnLarissa/gosql/cmd/server/app"
-	"github.com/SonnLarissa/gosql/pkg/customers"
+	"github.com/SonnLarissa/crud/cmd/app"
+	"github.com/SonnLarissa/crud/pkg/customers"
 	_ "github.com/jackc/pgx/v4/stdlib"
 	"log"
 	"net"
+
 	"net/http"
 	"os"
 )

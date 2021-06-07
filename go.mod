@@ -1,4 +1,4 @@
-module github.com/SonnLarissa/gosql
+module github.com/SonnLarissa/crud
 
 go 1.16
 

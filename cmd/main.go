@@ -4,6 +4,7 @@ import (
 	"context"
 	"github.com/SonnLarissa/crud/cmd/app"
 	"github.com/SonnLarissa/crud/pkg/customers"
+	"github.com/gorilla/mux"
 	"github.com/jackc/pgx/v4/pgxpool"
 	_ "github.com/jackc/pgx/v4/stdlib"
 	"go.uber.org/dig"
@@ -27,7 +28,8 @@ func main() {
 
 func execute(host string, port string, dsn string) (err error) {
 	deps := []interface{}{
-		app.NewServer,
+		//app.NewServer,
+		mux.NewRouter(), // mux->gorilla
 		http.NewServeMux,
 		func() (*pgxpool.Pool, error) {
 			ctx, _ := context.WithTimeout(context.Background(), time.Second*5)
